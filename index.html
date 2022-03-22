@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="tictactoe.css">
+</head>
+
+<body>
+        <center>
+                <h1>Tic-Tac-Toe By Shaurya</h1>
+                <table>
+                        <tr>
+                                <td><img onclick="playGame(this.id)" id="first" width="300px"
+                                                src="https://www.freeiconspng.com/uploads/orange-square-image-2.png"
+                                                alt=""></td>
+                                <td><img onclick="playGame(this.id)" id="second" width="300px"
+                                                src="https://www.freeiconspng.com/uploads/orange-square-image-2.png"
+                                                alt=""></td>
+                                <td><img onclick="playGame(this.id)" id="third" width="300px"
+                                                src="https://www.freeiconspng.com/uploads/orange-square-image-2.png"
+                                                alt=""></td>
+                        </tr>
+                        <tr>
+                                <td><img onclick="playGame(this.id)" id="fourth" width="300px"
+                                                src="https://www.freeiconspng.com/uploads/orange-square-image-2.png"
+                                                alt=""></td>
+                                <td><img onclick="playGame(this.id)" id="fifth" width="300px"
+                                                src="https://www.freeiconspng.com/uploads/orange-square-image-2.png"
+                                                alt=""></td>
+                                <td><img onclick="playGame(this.id)" id="sixth" width="300px"
+                                                src="https://www.freeiconspng.com/uploads/orange-square-image-2.png"
+                                                alt=""></td>
+                        </tr>
+                        <tr>
+                                <td><img onclick="playGame(this.id)" id="seven" width="300px"
+                                                src="https://www.freeiconspng.com/uploads/orange-square-image-2.png"
+                                                alt=""></td>
+                                <td><img onclick="playGame(this.id)" id="eight" width="300px"
+                                                src="https://www.freeiconspng.com/uploads/orange-square-image-2.png"
+                                                alt=""></td>
+                                <td><img onclick="playGame(this.id)" id="nine" width="300px"
+                                                src="https://www.freeiconspng.com/uploads/orange-square-image-2.png"
+                                                alt=""></td>
+                        </tr>
+                </table>
+                <a href="index.html">
+                <button>Restart Game</button>
+        </a>
+        </center>
+        <script>
+                let x = "https://creazilla-store.fra1.digitaloceanspaces.com/emojis/52726/cross-mark-emoji-clipart-md.png"
+                let o = "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Red_circle.svg/1200px-Red_circle.svg.png"
+                let play = "https://www.freeiconspng.com/uploads/orange-square-image-2.png"
+                let y = 1
+                function playGame(gid) {
+                        let target = document.getElementById(gid).src
+                        if (target == play) {
+                                y = y + 1
+                                if (y % 2 == 0) {
+                                        document.getElementById(gid).src = "https://creazilla-store.fra1.digitaloceanspaces.com/emojis/52726/cross-mark-emoji-clipart-md.png"
+                                }
+                                else {
+                                        document.getElementById(gid).src = "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Red_circle.svg/1200px-Red_circle.svg.png"
+                                }
+                                let firstPosition = document.getElementById("first").src
+                                let secondPosition = document.getElementById("second").src
+                                let thirdPosition = document.getElementById("third").src
+                                let fourthPosition = document.getElementById("fourth").src
+                                let fifthPosition = document.getElementById("fifth").src
+                                let sixthPosition = document.getElementById("sixth").src
+                                let seventhPosition = document.getElementById("seven").src
+                                let eighthPosition = document.getElementById("eight").src
+                                let ninethPosition = document.getElementById("nine").src
+
+                                //first row
+                                if (firstPosition == x && secondPosition == x && thirdPosition == x) {
+                                        location.href = "xwinner.html"
+                                }
+                                //second row
+                                else if (fourthPosition == x && fifthPosition == x && sixthPosition == x) {
+                                        location.href = "xwinner.html"
+                                }
+                                else if (seventhPosition == x && eighthPosition == x && ninethPosition == x) {
+                                        location.href = "xwinner.html"
+                                }
+                                else if (firstPosition == x && fourthPosition == x && seventhPosition == x) {
+                                        location.href = "xwinner.html"
+                                }
+                                else if (secondPosition == x && fifthPosition == x && eighthPosition == x) {
+                                        location.href = "xwinner.html"
+                                }
+                                else if (thirdPosition == x && sixthPosition == x && ninethPosition == x) {
+                                        location.href = "xwinner.html"
+                                }
+                                else if (firstPosition == x && fifthPosition == x && ninethPosition == x) {
+                                        location.href = "xwinner.html"
+                                }
+                                else if (thirdPosition == x && fifthPosition == x && seventhPosition == x) {
+                                        location.href = "xwinner.html"
+                                }
+                                //conditions for o
+                                else if (firstPosition == o && secondPosition == o && thirdPosition == o) {
+                                        location.href = "owinner.html"
+                                }
+                                //second row
+                                else if (fourthPosition == o && fifthPosition == o && sixthPosition == o) {
+                                        location.href = "owinner.html"
+                                }
+                                else if (seventhPosition == o && eighthPosition == o && ninethPosition == o) {
+                                        location.href = "owinner.html"
+                                }
+                                else if (firstPosition == o && fourthPosition == o && seventhPosition == o) {
+                                        location.href = "owinner.html"
+                                }
+                                else if (secondPosition == o && fifthPosition == o && eighthPosition == o) {
+                                        location.href = "owinner.html"
+                                }
+                                else if (thirdPosition == o && sixthPosition == o && ninethPosition == o) {
+                                        location.href = "owinner.html"
+                                }
+                                else if (firstPosition == o && fifthPosition == o && ninethPosition == o) {
+                                        location.href = "owinner.html"
+                                }
+                                else if (thirdPosition == o && fifthPosition == o && seventhPosition == o) {
+                                        location.href = "owinner.html"
+                                }
+                        }
+                }
+
+        </script>
+</body>
+
+</html>
