@@ -27,6 +27,9 @@ button{
 button:hover{
     cursor: pointer;
 }
+table td {
+    width: 150px;
+}
 table img{
-    width: 250px;
+    width: 100%;
 }
